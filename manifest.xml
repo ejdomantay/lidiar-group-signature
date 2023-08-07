@@ -3,22 +3,21 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
   xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="MailApp">
-  <Id>{C341AD31-BF7A-4C1D-99F1-D2E5896BEB0A}</Id>
+  <Id>{E8635277-0AE0-4335-BDE5-D065D706F336}</Id>
   <Version>1.0</Version>
-  <ProviderName>LidiarGroup</ProviderName>
+  <ProviderName>Lidiar Group</ProviderName>
   <DefaultLocale>en-us</DefaultLocale>
-  <DisplayName DefaultValue="Office Add-ins signature sample"/>
+  <DisplayName DefaultValue="Lidiar Group Signature Add-in"/>
   <Description DefaultValue="Insert your signature with ease."/>
-  <IconUrl DefaultValue="https://officedev.github.io/Office-Add-in-samples/Samples/outlook-set-signature/assets/final_logo.png"/>
-  <HighResolutionIconUrl DefaultValue="https://officedev.github.io/Office-Add-in-samples/Samples/outlook-set-signature/assets/final_logo.jpg"/>
-  <SupportUrl DefaultValue="https://lidiargroup.com.au"/>
+  <IconUrl DefaultValue="https://lidiargroup.com.au/wp-content/uploads/2015/10/Logo_Small_100px.png"/>
+  <HighResolutionIconUrl DefaultValue="https://lidiargroup.com.au/wp-content/uploads/2015/10/Logo_Small_100px.png"/>
+  <SupportUrl DefaultValue="https://lidiargroup.com.au/"/>
   <AppDomains>
     <AppDomain>https://lidiargroup.com.au/</AppDomain>
   </AppDomains>
   <Hosts>
     <Host Name="Mailbox"/>
   </Hosts>
-  
   <Requirements>
     <Sets DefaultMinVersion="1.1">
       <Set Name="Mailbox" />
@@ -29,7 +28,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://officedev.github.io/Office-Add-in-samples/Samples/outlook-set-signature/src/taskpane/HTML/editsignature.html"/>
+        <SourceLocation DefaultValue="https://github.com/ejdomantay/lidiar-group-signature/tree/main/src/taskpane/HTML/editsignature.html"/>
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
     </Form>
@@ -43,6 +42,7 @@
 
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
     <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides/1.1" xsi:type="VersionOverridesV1_1">
+      
       <Description resid="residAppDesc" />
 
       <Requirements>
@@ -53,8 +53,8 @@
 
       <Hosts>
         <Host xsi:type="MailHost">
-        <!-- Specify the runtime for event-based activation. -->
-        <!-- For more information, see https://learn.microsoft.com/office/dev/add-ins/outlook/autolaunch -->
+          <!-- Specify the runtime for event-based activation. -->
+          <!-- For more information, see https://learn.microsoft.com/office/dev/add-ins/outlook/autolaunch -->
           <Runtimes>
             <Runtime resid="Autorun">
               <Override type="javascript" resid="runtimeJs"/>
@@ -107,7 +107,7 @@
                 </Group>
               </OfficeTab>
             </ExtensionPoint>
-            
+
             <!-- Specify function to call for new message and new appointment events -->
             <ExtensionPoint xsi:type="LaunchEvent">
               <LaunchEvents>
@@ -122,20 +122,20 @@
       </Hosts>
       <Resources>
         <bt:Images>
-          <bt:Image id="Icon16x16" DefaultValue="https://officedev.github.io/Office-Add-in-samples/Samples/outlook-set-signature/assets/final_logo.png"></bt:Image>
+          <bt:Image id="Icon16x16" DefaultValue="https://lidiargroup.com.au/wp-content/uploads/2015/10/Logo_Small_100px.png"></bt:Image>
         </bt:Images>
         <bt:Urls>
-          <bt:Url id="residUrl0" DefaultValue="https://officedev.github.io/Office-Add-in-samples/Samples/outlook-set-signature/src/taskpane/HTML/editsignature.html"></bt:Url>
-          <bt:Url id="Autorun" DefaultValue="https://officedev.github.io/Office-Add-in-samples/Samples/outlook-set-signature/src/runtime/HTML/autorunweb.html"></bt:Url>
-          <bt:Url id="runtimeJs" DefaultValue="https://officedev.github.io/Office-Add-in-samples/Samples/outlook-set-signature/src/runtime/Js/autorunshared.js"></bt:Url>
+          <bt:Url id="residUrl0" DefaultValue="https://github.com/ejdomantay/lidiar-group-signature/tree/main/src/taskpane/HTML/editsignature.html"></bt:Url>
+          <bt:Url id="Autorun" DefaultValue="https://github.com/ejdomantay/lidiar-group-signature/blob/main/src/runtime/HTML/autorunweb.html"></bt:Url>
+          <bt:Url id="runtimeJs" DefaultValue="https://github.com/ejdomantay/lidiar-group-signature/blob/main/src/runtime/Js/autorunshared.js"></bt:Url>
         </bt:Urls>
         <bt:ShortStrings>
-          <bt:String id="residGL0" DefaultValue="Signature Injector"></bt:String>
-          <bt:String id="residStr0" DefaultValue="Set my signature"></bt:String>
+          <bt:String id="residGL0" DefaultValue="Lidiar Group Signature Add-in"></bt:String>
+          <bt:String id="residStr0" DefaultValue="Lidiar Group Signature Add-in"></bt:String>
         </bt:ShortStrings>
         <bt:LongStrings>
-          <bt:String id="residAppDesc" DefaultValue="Insert your signature with ease."></bt:String>
-          <bt:String id="residTT0" DefaultValue="Opens a pane displaying all available properties."></bt:String>
+          <bt:String id="residAppDesc" DefaultValue="Lidiar Group Signature Add-in"></bt:String>
+          <bt:String id="residTT0" DefaultValue="Lidiar Group Signature Add-in"></bt:String>
         </bt:LongStrings>
       </Resources>
     </VersionOverrides>
