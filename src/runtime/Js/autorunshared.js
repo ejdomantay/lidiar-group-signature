@@ -93,23 +93,23 @@ function setSignatureTemplate(curUser, eventObj){
               '<td>'+
                   '<span><b>Lidiar Group Pty Ltd</b></span>'+
                   '</td>'+
-              '</tr>'+
+            '</tr>'+
             '<tr>'+
-            '<td>'+
-              '<span style="color:red">m.</span>'+
-                  '<span>'+ (busNo ? busNo.Number : "") +'</span>'+
+              '<td>'+
+                  '<span style="color:red">m.</span>'+
+                  '<span> '+ (busNo ? busNo.Number : "") +'</span>'+
                   '<span> | <span>'+
                   '<span style="color:red">e.</span>'+
-                  '<span>'+ Office.context.mailbox.userProfile.emailAddress +'</span>'+
+                  '<span> '+ Office.context.mailbox.userProfile.emailAddress +'</span>'+
                   '</td>'+
-              '</tr>'+
+            '</tr>'+
             '<tr>'+
-            '<td>'+
-              '<span style="color:red">o.</span>'+
-                  '<span>'+ (curUser.OfficeLocation ? curUser.OfficeLocation : "Level 1, 240 Queen Street Brisbane QLD 4000") +'</span>'+
+              '<td>'+
+                '<span style="color:red">o.</span>'+
+                '<span> '+ (curUser.OfficeLocation ? curUser.OfficeLocation : "Level 1, 240 Queen Street Brisbane QLD 4000") +'</span>'+
                   
-                  '</td>'+
-              '</tr>'+
+              '</td>'+
+            '</tr>'+
             '<tr>'+
             '<td>'+
               '<span style="color:red">w.</span> <span>www.lidiargroup.com.au</span>'+
@@ -123,7 +123,7 @@ function setSignatureTemplate(curUser, eventObj){
                 
                 '	<a href="https://teams.microsoft.com/l/chat/0/0?users='+ Office.context.mailbox.userProfile.emailAddress +'">'+
           
-                'Chat with me on Teams'+
+                ' Chat with me on Teams'+
                   '	</a>'+
                 '	</td>'+
               '</tr>'+	
