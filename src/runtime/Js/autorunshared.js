@@ -37,28 +37,12 @@ function getCurrentUser(eventObj){
         const curUser = response.value.filter(x => x.UserPrincipalName == Office.context.mailbox.userProfile.emailAddress)[0];
         console.log(curUser);
         setSignatureTemplate(curUser, eventObj);
-        // setSignatureTemplate({
-        //   Title: "ASD",
-        //   Phones: [{ Type: "Business", Number: "QWE"}],
-        //   OfficeLocation: "ZXC"
-        //  }, eventObj);
-        // $.ajax({  
-        //   method: 'GET',  
-        //   url: Office.context.mailbox.restUrl + "/v1.0/contacts/" + response.Id,  
-        //   headers: {  
-        //       'Authorization': 'Bearer ' + result.value,  
-        //       'Content-Type': 'application/json'  
-        //   },  
-        // }).success(function(response) {  
-        //     console.log(Office.context.mailbox.restUrl + "/v1.0/contacts/" + response.Id, response);  
-        // }).error(function(error) {});
-
     }).error(function(error) {
        console.log(error);
        setSignatureTemplate({
-        Title: "ASD",
-        Phones: [{ Type: "Business", Number: "QWE"}],
-        OfficeLocation: "ZXC"
+        Title: "",
+        Phones: [{ Type: "Business", Number: ""}],
+        OfficeLocation: ""
        }, eventObj);
     });
   });

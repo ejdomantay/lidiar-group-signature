@@ -4,7 +4,7 @@
   xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
   xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="MailApp">
   <Id>{E8635277-0AE0-4335-BDE5-D065D706F336}</Id>
-  <Version>2.0</Version>
+  <Version>3.0</Version>
   <ProviderName>Lidiar Group</ProviderName>
   <DefaultLocale>en-us</DefaultLocale>
   <DisplayName DefaultValue="Lidiar Group Signature Add-in"/>
