@@ -8,7 +8,7 @@
   <ProviderName>Lidiar Group</ProviderName>
   <DefaultLocale>en-us</DefaultLocale>
   <DisplayName DefaultValue="Lidiar Group Signature Add-in"/>
-  <Description DefaultValue="Insert your signature with ease."/>
+  <Description DefaultValue="Lidiar Group Signature Add-in"/>
   <IconUrl DefaultValue="https://lidiargroup.com.au/wp-content/uploads/2015/10/Logo_Small_100px.png"/>
   <HighResolutionIconUrl DefaultValue="https://lidiargroup.com.au/wp-content/uploads/2015/10/Logo_Small_100px.png"/>
   <SupportUrl DefaultValue="https://lidiargroup.com.au/"/>
