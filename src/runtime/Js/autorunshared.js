@@ -24,8 +24,8 @@ function getCurrentUser(eventObj){
 
     //const apiUrl = Office.context.mailbox.restUrl + "/v2.0/Users('" + Office.context.mailbox.userProfile.emailAddress + "')";
     //const apiUrl = Office.context.mailbox.restUrl + "/v1.0/Users('" + Office.context.mailbox.userProfile.emailAddress + "')/Contacts";
-    const apiUrl = Office.context.mailbox.restUrl + "/beta/Users('" + Office.context.mailbox.userProfile.emailAddress + "')/people";
-
+    //const apiUrl = Office.context.mailbox.restUrl + "/beta/Users('" + Office.context.mailbox.userProfile.emailAddress + "')/people";
+    const apiUrl = Office.context.mailbox.restUrl + "/v2.0/me/people"
     $.ajax({  
       method: 'GET',  
       url: apiUrl,  
@@ -61,7 +61,7 @@ function setSignatureTemplate(curUser, eventObj){
     '<table style="border:0;border-spacing:0;" cellspacing="0">'+
       '<tr>'+
         '<td style="padding-right: 20px;">'+
-          '<img  height="82" width="120" src="https://raw.githubusercontent.com/ejdomantay/lidiar-group/main/Lidiar%20Main%20Logo.png"></img>'+
+          '<img height="85" width="120" src="https://raw.githubusercontent.com/ejdomantay/lidiar-group/main/Lidiar%20Main%20Logo.png"></img>'+
         '</td>'+
         '<td>'+
           '<table style="border:0;border-spacing:0;" cellspacing="0">'+		
