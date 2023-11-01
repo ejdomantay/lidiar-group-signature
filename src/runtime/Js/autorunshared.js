@@ -56,8 +56,8 @@ function setSignatureTemplate(curUser, eventObj){
   
 			'<span style="font-size:14px"><b>'+ Office.context.mailbox.userProfile.displayName +'</b></span>'+
       '<br />'+
-			'<span style="font-size:14px">'+ curUser.Title +'<span>'+
-
+			// '<span style="font-size:14px">'+ curUser.Title +'<span>'+
+      '<span style="font-size:14px">ASASA<span>'+
     '<br />'+
     '<br />'+
     '<table style="border:0;border-spacing:0;" cellspacing="0">'+
