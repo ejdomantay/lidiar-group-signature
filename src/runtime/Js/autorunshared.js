@@ -38,15 +38,15 @@ function getCurrentUser(eventObj){
       
         const curUser = response.value.filter(x => x.UserPrincipalName == Office.context.mailbox.userProfile.emailAddress)[0];
         console.log(curUser);
-        setSignatureTemplate(curUser, eventObj);
+        //setSignatureTemplate(curUser, eventObj);
     }).error(function(error) {
       ManualDebug(eventObj, "ERROR");
        console.log(error);
-       setSignatureTemplate({
-        Title: "",
-        Phones: [{ Type: "Business", Number: ""}],
-        OfficeLocation: ""
-       }, eventObj);
+      //  setSignatureTemplate({
+      //   Title: "",
+      //   Phones: [{ Type: "Business", Number: ""}],
+      //   OfficeLocation: ""
+      //  }, eventObj);
     });
   });
 }
