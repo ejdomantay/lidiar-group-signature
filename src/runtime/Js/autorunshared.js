@@ -50,14 +50,13 @@ function getCurrentUser(eventObj){
 
 
 function setSignatureTemplate(curUser, eventObj){
-  const busNo = "TEST";
-  //const busNo = curUser.Phones.filter(x => x.Type == "Business")[0];
+  
+  const busNo = curUser.Phones.filter(x => x.Type == "Business")[0];
   const emailTemplate = 
   
 			'<span style="font-size:14px"><b>'+ Office.context.mailbox.userProfile.displayName +'</b></span>'+
       '<br />'+
-			// '<span style="font-size:14px">'+ curUser.Title +'<span>'+
-      '<span style="font-size:14px">ASASA<span>'+
+			'<span style="font-size:14px">'+ curUser.JobTitle +'<span>'+
     '<br />'+
     '<br />'+
     '<table style="border:0;border-spacing:0;" cellspacing="0">'+
@@ -83,8 +82,8 @@ function setSignatureTemplate(curUser, eventObj){
             '<tr>'+
               '<td>'+
                   '<span style="color:red">m.</span>'+
-                  // '<span> '+ (busNo ? busNo.Number : "") +'</span>'+
-                  '<span> ASASASA</span>'+
+                  '<span> '+ (busNo ? (busNo.Number ? busNo.Number : "") : "") +'</span>'+
+                  
                   '<span> | <span>'+
                   '<span style="color:red">e.</span>'+
                   '<span> '+ Office.context.mailbox.userProfile.emailAddress +'</span>'+
@@ -93,8 +92,7 @@ function setSignatureTemplate(curUser, eventObj){
             '<tr>'+
               '<td>'+
                 '<span style="color:red">o.</span>'+
-                //'<span> '+ (curUser.OfficeLocation ? curUser.OfficeLocation : "Level 3, 240 Queen Street Brisbane QLD 4000") +'</span>'+
-                '<span>Level 3, 240 Queen Street Brisbane QLD 4000</span>'+
+                '<span> '+ (curUser.OfficeLocation ? curUser.OfficeLocation : "Level 3, 240 Queen Street Brisbane QLD 4000") +'</span>'
               '</td>'+
             '</tr>'+
             '<tr>'+
