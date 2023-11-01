@@ -34,10 +34,13 @@ function getCurrentUser(eventObj){
           'Content-Type': 'application/json'  
       },  
     }).success(function(response) {  
+        ManualDebug(eventObj, "SUCCESS");
+      
         const curUser = response.value.filter(x => x.UserPrincipalName == Office.context.mailbox.userProfile.emailAddress)[0];
         console.log(curUser);
         setSignatureTemplate(curUser, eventObj);
     }).error(function(error) {
+      ManualDebug(eventObj, "ERROR");
        console.log(error);
        setSignatureTemplate({
         Title: "",
@@ -47,7 +50,34 @@ function getCurrentUser(eventObj){
     });
   });
 }
-
+function ManualDebug(eventObj, data){
+  if(Office.context.mailbox.item.itemType == Office.MailboxEnums.ItemType.Appointment)
+    {
+      Office.context.mailbox.item.body.setAsync(
+        "<br/><br/>" + data,
+        {
+          coercionType: "html",
+          asyncContext: eventObj,
+        },
+        function (asyncResult) {
+    
+          asyncResult.asyncContext.completed();
+        }
+      );
+    }
+    else{
+    Office.context.mailbox.item.body.setSignatureAsync(
+      data,
+      {
+        coercionType: "html",
+        asyncContext: eventObj,
+      },
+      function (asyncResult) {
+        asyncResult.asyncContext.completed();
+      }
+    );
+  }
+}
 
 function setSignatureTemplate(curUser, eventObj){
   
