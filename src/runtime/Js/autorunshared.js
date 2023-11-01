@@ -48,8 +48,10 @@ function getCurrentUser(eventObj){
   });
 }
 
+
 function setSignatureTemplate(curUser, eventObj){
-  const busNo = curUser.Phones.filter(x => x.Type == "Business")[0];
+  const busNo = "TEST";
+  //const busNo = curUser.Phones.filter(x => x.Type == "Business")[0];
   const emailTemplate = 
   
 			'<span style="font-size:14px"><b>'+ Office.context.mailbox.userProfile.displayName +'</b></span>'+
