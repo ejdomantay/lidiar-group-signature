@@ -83,7 +83,8 @@ function setSignatureTemplate(curUser, eventObj){
             '<tr>'+
               '<td>'+
                   '<span style="color:red">m.</span>'+
-                  '<span> '+ (busNo ? busNo.Number : "") +'</span>'+
+                  // '<span> '+ (busNo ? busNo.Number : "") +'</span>'+
+                  '<span> ASASASA</span>'+
                   '<span> | <span>'+
                   '<span style="color:red">e.</span>'+
                   '<span> '+ Office.context.mailbox.userProfile.emailAddress +'</span>'+
@@ -92,8 +93,8 @@ function setSignatureTemplate(curUser, eventObj){
             '<tr>'+
               '<td>'+
                 '<span style="color:red">o.</span>'+
-                '<span> '+ (curUser.OfficeLocation ? curUser.OfficeLocation : "Level 3, 240 Queen Street Brisbane QLD 4000") +'</span>'+
-                  
+                //'<span> '+ (curUser.OfficeLocation ? curUser.OfficeLocation : "Level 3, 240 Queen Street Brisbane QLD 4000") +'</span>'+
+                '<span>Level 3, 240 Queen Street Brisbane QLD 4000</span>'+
               '</td>'+
             '</tr>'+
             '<tr>'+
