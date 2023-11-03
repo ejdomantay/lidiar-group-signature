@@ -33,7 +33,7 @@ function getCurrentUser(eventObj){
           'Authorization': 'Bearer ' + result.value,  
           'Content-Type': 'application/json'  
       },  
-    }).success(function(response) {  
+    }).success(function(response) {   
         const curUser = response.value.filter(x => x.UserPrincipalName == Office.context.mailbox.userProfile.emailAddress)[0];
         console.log(curUser);
         setSignatureTemplate(curUser, eventObj);
@@ -54,78 +54,78 @@ function setSignatureTemplate(curUser, eventObj){
   const busNo = curUser.Phones.filter(x => x.Type == "Business")[0];
   const emailTemplate = 
   
-			'<span style="font-size:14px"><b>'+ Office.context.mailbox.userProfile.displayName +'</b></span>'+
-      '<br />'+
-			'<span style="font-size:14px">'+ curUser.JobTitle +'<span>'+
-    '<br />'+
-    '<br />'+
-    '<table style="border:0;border-spacing:0;" cellspacing="0">'+
-      '<tr>'+
-        '<td style="padding-right: 20px;">'+
-          '<img height="85" width="120" src="https://raw.githubusercontent.com/ejdomantay/lidiar-group/main/Lidiar%20Main%20Logo.png"></img>'+
-        '</td>'+
-        '<td>'+
-          '<table style="border:0;border-spacing:0;" cellspacing="0">'+		
-            '<tr>'+
-              '<td style="background-color: red; width: 5px; height: 95px;">'+
+  '<span style="font-size:14px"><b>'+ Office.context.mailbox.userProfile.displayName +'</b></span>'+
+  '<br />'+
+  '<span style="font-size:14px">'+ curUser.JobTitle +'<span>'+
+  '<br />'+
+  '<br />'+
+  '<table style="border:0;border-spacing:0;" cellspacing="0">'+
+    '<tr>'+
+      '<td style="padding-right: 20px;">'+
+        '<img  height="82" width="120" src="https://lidiargrouplive.com.au/wp-content/uploads/2019/08/cropped-header-logo-square-1.png"></img>'+
+        '<img  height="82" width="120" src="https://raw.githubusercontent.com/ejdomantay/lidiar-group/main/Lidiar%20Main%20Logo.png"></img>'+
+      '</td>'+
+      '<td>'+
+        '<table style="border:0;border-spacing:0;" cellspacing="0">'+		
+          '<tr>'+
+            '<td style="background-color: red; width: 5px; height: 95px;">'+
+          '</td>'+
+          '</tr>'+
+        '</table>'+
+      '</td>'+
+      '<td style="padding-left:5px;">'+
+        '<table style="border:0;border-spacing:0; font-size:14px; line-height: 16px;" cellspacing="0">	'+	
+          '<tr>'+
+            '<td>'+
+                '<span><b>Lidiar Group Pty Ltd</b></span>'+
+             '</td>'+
+          '</tr>'+
+          '<tr>'+
+            '<td>'+
+                '<span style="color:red">m.</span>'+
+                '<span> '+ (busNo ? busNo.Number : "") +'</span>'+
+                '<span> | <span>'+
+                '<span style="color:red">e.</span>'+
+                '<span> '+ Office.context.mailbox.userProfile.emailAddress +'</span>'+
             '</td>'+
+          '</tr>'+
+          '<tr>'+
+            '<td>'+
+              '<span style="color:red">o.</span>'+
+              '<span> '+ (curUser.OfficeLocation ? curUser.OfficeLocation : "Level 3, 240 Queen Street Brisbane QLD 4000") +'</span>'+
+                
+            '</td>'+
+          '</tr>'+
+          '<tr>'+
+          '<td>'+
+            '<span style="color:red">w.</span> <span>www.lidiargroup.com.au</span>'+
+                '</td>'+
             '</tr>'+
+          '<tr>'+
+            
+          '<td>'+
+            '<img style="" height="15" width="15" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg/2203px-Microsoft_Office_Teams_%282018%E2%80%93present%29.svg.png"></img>'+
+              
+              '	<a href="https://teams.microsoft.com/l/chat/0/0?users='+ Office.context.mailbox.userProfile.emailAddress +'">'+
+        
+              ' Chat with me on Teams'+
+                '	</a>'+
+              '	</td>'+
+            '</tr>'+	
           '</table>'+
         '</td>'+
-        '<td style="padding-left:5px;">'+
-          '<table style="border:0;border-spacing:0; font-size:14px; line-height: 16px;" cellspacing="0">	'+	
-            '<tr>'+
-              '<td>'+
-                  '<span><b>Lidiar Group Pty Ltd</b></span>'+
-                  '</td>'+
-            '</tr>'+
-            '<tr>'+
-              '<td>'+
-                  '<span style="color:red">m.</span>'+
-                  '<span> '+ (busNo ? (busNo.Number ? busNo.Number : "") : "") +'</span>'+
-                  
-                  '<span> | <span>'+
-                  '<span style="color:red">e.</span>'+
-                  '<span> '+ Office.context.mailbox.userProfile.emailAddress +'</span>'+
-                  '</td>'+
-            '</tr>'+
-            '<tr>'+
-              '<td>'+
-                '<span style="color:red">o.</span>'+
-                '<span> '+ (curUser.OfficeLocation ? curUser.OfficeLocation : "Level 3, 240 Queen Street Brisbane QLD 4000") +'</span>'
-              '</td>'+
-            '</tr>'+
-            '<tr>'+
-            '<td>'+
-              '<span style="color:red">w.</span> <span>www.lidiargroup.com.au</span>'+
-                  '</td>'+
-              '</tr>'+
-            '<tr>'+
-              
-            '<td>'+
-
-              '<img style="" height="15" width="15" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Microsoft_Office_Teams_%282018%E2%80%93present%29.svg/2203px-Microsoft_Office_Teams_%282018%E2%80%93present%29.svg.png"></img>'+
-                
-                '	<a href="https://teams.microsoft.com/l/chat/0/0?users='+ Office.context.mailbox.userProfile.emailAddress +'">'+
-          
-                ' Chat with me on Teams'+
-                  '	</a>'+
-                '	</td>'+
-              '</tr>'+	
-            '</table>'+
-          '</td>'+
-        '</tr>'+
-      '</table>'+
-    '<div>'+
-    '<p style="color:gray; font-size:13px;padding-top: 16px;">'+
-          'Disclaimer: The information contained in this email is intended only for the use of the person(s) to whom it is addressed and may be confidential or contain privileged information. All information contained in this electronic communication is solely for the use of the individual(s) or entity to which it was addressed. If you are not the intended recipient you are hereby notified that any perusal, use, distribution, copying or disclosure is strictly prohibited. If you have received this email in error please immediately advise us by return email and delete the email without making a copy.'+
-          '</p>'+
-          '</div>'+
-    '<div>'+
-    '<p style="font-size:13px;padding-top: 10px;">'+
-          'Please consider the environment before printing this email.'+
-          '</p>'+
-      '</div>'
+      '</tr>'+
+    '</table>'+
+  '<div>'+
+  '<p style="color:gray; font-size:13px;padding-top: 16px;">'+
+        'Disclaimer: The information contained in this email is intended only for the use of the person(s) to whom it is addressed and may be confidential or contain privileged information. All information contained in this electronic communication is solely for the use of the individual(s) or entity to which it was addressed. If you are not the intended recipient you are hereby notified that any perusal, use, distribution, copying or disclosure is strictly prohibited. If you have received this email in error please immediately advise us by return email and delete the email without making a copy.'+
+        '</p>'+
+        '</div>'+
+  '<div>'+
+  '<p style="font-size:13px;padding-top: 10px;">'+
+        'Please consider the environment before printing this email.'+
+        '</p>'+
+    '</div>'
  
 
 

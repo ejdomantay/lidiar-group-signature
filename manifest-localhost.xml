@@ -4,11 +4,11 @@
   xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0"
   xmlns:mailappor="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="MailApp">
   <Id>{9b9063e5-e554-4e3f-8049-5b3dc6d6c51c}</Id>
-  <Version>1.0</Version>
+  <Version>2.0</Version>
   <ProviderName>Lidiar Group</ProviderName>
   <DefaultLocale>en-us</DefaultLocale>
-  <DisplayName DefaultValue="Lidiar Group Signature Add-in"/>
-  <Description DefaultValue="Lidiar Group Signature Add-in"/>
+  <DisplayName DefaultValue="Lidiar Group Signature Add-in LOCAL"/>
+  <Description DefaultValue="Lidiar Group Signature Add-in LOCAL"/>
   <IconUrl DefaultValue="https://lidiargroup.com.au/wp-content/uploads/2015/10/Logo_Small_100px.png"/>
   <HighResolutionIconUrl DefaultValue="https://lidiargroup.com.au/wp-content/uploads/2015/10/Logo_Small_100px.png"/>
   <SupportUrl DefaultValue="https://lidiargroup.com.au/"/>
