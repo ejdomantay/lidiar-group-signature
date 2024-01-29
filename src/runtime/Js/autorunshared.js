@@ -24,7 +24,7 @@ function getCurrentUser(eventObj){
 
     //const apiUrl = Office.context.mailbox.restUrl + "/v2.0/Users('" + Office.context.mailbox.userProfile.emailAddress + "')";
     //const apiUrl = Office.context.mailbox.restUrl + "/v1.0/Users('" + Office.context.mailbox.userProfile.emailAddress + "')/Contacts";
-    const apiUrl = "https://outlook.office365.com/api/beta/Users('" + Office.context.mailbox.userProfile.emailAddress + "')/people?$top=100";
+    const apiUrl = Office.context.mailbox.restUrl + "/beta/Users('" + Office.context.mailbox.userProfile.emailAddress + "')/people?$top=100";
     // const apiUrl = Office.context.mailbox.restUrl + "/v2.0/me/people"
     $.ajax({  
       method: 'GET',  
@@ -35,7 +35,8 @@ function getCurrentUser(eventObj){
       },  
     }).success(function(response) {   
         const curUser = response.value.filter(x => x.UserPrincipalName == Office.context.mailbox.userProfile.emailAddress)[0];
-        console.log(curUser);
+        console.log("esponse.value", response.value);
+        console.log("curUser", curUser);
         setSignatureTemplate(curUser, eventObj);
     }).error(function(error) {
        console.log(error);
