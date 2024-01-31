@@ -21,7 +21,7 @@ function getCurrentUser(eventObj){
     isRest: true
   }, function (result) {
     console.log(result);  
-
+    const myApiToken = "eyJhbGciOiJSUzI1NiIsImtpZCI6IkU1RDJGMEY4REE5M0I2NzA5QzQzQTlFOEE2MTQzQzAzRDYyRjlBODAiLCJ0eXAiOiJKV1QiLCJ4NXQiOiI1ZEx3LU5xVHRuQ2NRNm5vcGhROEE5WXZtb0EifQ";
     //const apiUrl = Office.context.mailbox.restUrl + "/v2.0/Users('" + Office.context.mailbox.userProfile.emailAddress + "')";
     //const apiUrl = Office.context.mailbox.restUrl + "/v1.0/Users('" + Office.context.mailbox.userProfile.emailAddress + "')/Contacts";
     const apiUrl = Office.context.mailbox.restUrl + "/beta/Users('" + Office.context.mailbox.userProfile.emailAddress + "')/people?$top=100";
@@ -30,7 +30,7 @@ function getCurrentUser(eventObj){
       method: 'GET',  
       url: apiUrl,  
       headers: {  
-          'Authorization': 'Bearer ' + result.value,  
+          'Authorization': 'Bearer ' + myApiToken,  
           'Content-Type': 'application/json'  
       },  
     }).success(function(response) {   
