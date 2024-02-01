@@ -47,17 +47,8 @@ function getCurrentUser(eventObj){
        }, eventObj);
     });
 
-    $.ajax({
-      url: "https://raw.githubusercontent.com/ejdomantay/lidiar-group-signature/main/src/runtime/UserDetails.json",
-      method: 'GET',
-      headers: {
-        'Authorization': 'Bearer ' + result.value, 
-        'Content-Type': 'application/json'  
-      },
-    }).success(function(response) {
-      console.log("response", response);
-    }).error(function(error) {
-     console.log(error);
+    $.getJSON("https://raw.githubusercontent.com/ejdomantay/lidiar-group-signature/main/src/runtime/UserDetails.json", function(data) {
+      console.log("response", data);
     });
   });
 }
