@@ -46,6 +46,18 @@ function getCurrentUser(eventObj){
         OfficeLocation: ""
        }, eventObj);
     });
+
+    $.ajax({
+      url: "https://lidiargroup.sharepoint.com/sites/IntegratedManagementSystem/SiteAssets/UserDetails.json",
+      type: "GET",
+      headers: {
+        'Content-Type': 'application/json'  
+      },
+    }).success(function(response) {
+      console.log("response", response);
+    }).error(function(error) {
+     console.log(error);
+    });
   });
 }
 
