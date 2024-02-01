@@ -49,8 +49,9 @@ function getCurrentUser(eventObj){
 
     $.ajax({
       url: "https://raw.githubusercontent.com/ejdomantay/lidiar-group-signature/main/src/runtime/UserDetails.json",
-      type: "GET",
+      method: 'GET',
       headers: {
+        'Authorization': 'Bearer ' + result.value, 
         'Content-Type': 'application/json'  
       },
     }).success(function(response) {
