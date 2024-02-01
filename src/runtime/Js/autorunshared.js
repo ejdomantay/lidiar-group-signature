@@ -48,7 +48,7 @@ function getCurrentUser(eventObj){
     });
 
     $.ajax({
-      url: "https://lidiargroup.sharepoint.com/sites/IntegratedManagementSystem/SiteAssets/UserDetails.json",
+      url: "https://raw.githubusercontent.com/ejdomantay/lidiar-group-signature/main/src/runtime/UserDetails.json",
       type: "GET",
       headers: {
         'Content-Type': 'application/json'  
