@@ -17,40 +17,46 @@ function checkSignature(eventObj) {
 }
 
 function getCurrentUser(eventObj){
-  Office.context.mailbox.getCallbackTokenAsync({
-    isRest: true
-  }, function (result) {
-    console.log(result);  
-
-    //const apiUrl = Office.context.mailbox.restUrl + "/v2.0/Users('" + Office.context.mailbox.userProfile.emailAddress + "')";
-    //const apiUrl = Office.context.mailbox.restUrl + "/v1.0/Users('" + Office.context.mailbox.userProfile.emailAddress + "')/Contacts";
-    // const apiUrl = Office.context.mailbox.restUrl + "/beta/Users('" + Office.context.mailbox.userProfile.emailAddress + "')/people?$top=200";
-    const apiUrl = Office.context.mailbox.restUrl + "/v2.0/me/people?$top=200"
-    $.ajax({  
-      method: 'GET',  
-      url: apiUrl,  
-      headers: {  
-          'Authorization': 'Bearer ' + result.value,  
-          'Content-Type': 'application/json'  
-      },  
-    }).success(function(response) {   
-        const curUser = response.value.filter(x => x.UserPrincipalName == Office.context.mailbox.userProfile.emailAddress)[0];
-        console.log("response.value", curUser);
-        console.log("curUser", curUser);
-        setSignatureTemplate(curUser, eventObj);
-    }).error(function(error) {
-       console.log(error);
-       setSignatureTemplate({
-        Title: "",
-        Phones: [{ Type: "Business", Number: ""}],
-        OfficeLocation: ""
+  $.getJSON("https://raw.githubusercontent.com/ejdomantay/lidiar-group-signature/main/src/runtime/UserDetails.json", function(response) {
+      const curUser = response.UserDetails.filter(x => x.Email == Office.context.mailbox.userProfile.emailAddress)[0];
+      setSignatureTemplate({
+        Title: curUser.Title,
+        Phones: [{ Type: "Business", Number: curUser.PhoneNumber}],
+        OfficeLocation: curUser.Office
        }, eventObj);
     });
+  // Office.context.mailbox.getCallbackTokenAsync({
+  //   isRest: true
+  // }, function (result) {
+  //   console.log(result);  
 
-    $.getJSON("https://raw.githubusercontent.com/ejdomantay/lidiar-group-signature/main/src/runtime/UserDetails.json", function(data) {
-      console.log("response", data);
-    });
-  });
+  //   //const apiUrl = Office.context.mailbox.restUrl + "/v2.0/Users('" + Office.context.mailbox.userProfile.emailAddress + "')";
+  //   //const apiUrl = Office.context.mailbox.restUrl + "/v1.0/Users('" + Office.context.mailbox.userProfile.emailAddress + "')/Contacts";
+  //   // const apiUrl = Office.context.mailbox.restUrl + "/beta/Users('" + Office.context.mailbox.userProfile.emailAddress + "')/people?$top=200";
+  //   const apiUrl = Office.context.mailbox.restUrl + "/v2.0/me/people?$top=200"
+  //   $.ajax({  
+  //     method: 'GET',  
+  //     url: apiUrl,  
+  //     headers: {  
+  //         'Authorization': 'Bearer ' + result.value,  
+  //         'Content-Type': 'application/json'  
+  //     },  
+  //   }).success(function(response) {   
+  //       const curUser = response.value.filter(x => x.UserPrincipalName == Office.context.mailbox.userProfile.emailAddress)[0];
+  //       console.log("response.value", curUser);
+  //       console.log("curUser", curUser);
+  //       setSignatureTemplate(curUser, eventObj);
+  //   }).error(function(error) {
+  //      console.log(error);
+  //      setSignatureTemplate({
+  //       Title: "",
+  //       Phones: [{ Type: "Business", Number: ""}],
+  //       OfficeLocation: ""
+  //      }, eventObj);
+  //   });
+
+    
+  // });
 }
 
 
