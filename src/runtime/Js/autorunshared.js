@@ -17,9 +17,9 @@ function checkSignature(eventObj) {
 }
 
 function getCurrentUser(eventObj){
-  // https://raw.githubusercontent.com/ejdomantay/lidiar-group-signature/main/src/runtime/UserDetails.json
   
-  $.getJSON("https://lidiargroup.sharepoint.com/sites/IntegratedManagementSystem/SiteAssets/UserDetails.json", function(response) {
+  // https://lidiargroup.sharepoint.com/sites/IntegratedManagementSystem/SiteAssets/UserDetails.json
+  $.getJSON("https://raw.githubusercontent.com/ejdomantay/lidiar-group-signature/main/src/runtime/UserDetails.json", function(response) {
       const curUser = response.UserDetails.filter(x => x.Email == Office.context.mailbox.userProfile.emailAddress)[0];
       setSignatureTemplate({
         Title: curUser.Title,
