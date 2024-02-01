@@ -24,8 +24,8 @@ function getCurrentUser(eventObj){
 
     //const apiUrl = Office.context.mailbox.restUrl + "/v2.0/Users('" + Office.context.mailbox.userProfile.emailAddress + "')";
     //const apiUrl = Office.context.mailbox.restUrl + "/v1.0/Users('" + Office.context.mailbox.userProfile.emailAddress + "')/Contacts";
-    const apiUrl = Office.context.mailbox.restUrl + "/beta/Users('" + Office.context.mailbox.userProfile.emailAddress + "')/people?$top=200";
-    // const apiUrl = Office.context.mailbox.restUrl + "/v2.0/me/people"
+    // const apiUrl = Office.context.mailbox.restUrl + "/beta/Users('" + Office.context.mailbox.userProfile.emailAddress + "')/people?$top=200";
+    const apiUrl = Office.context.mailbox.restUrl + "/v2.0/me/people?$top=200"
     $.ajax({  
       method: 'GET',  
       url: apiUrl,  
