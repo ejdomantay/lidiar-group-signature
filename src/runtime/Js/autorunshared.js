@@ -17,16 +17,477 @@ function checkSignature(eventObj) {
 }
 
 function getCurrentUser(eventObj){
-  
+  var userDetails = {
+    "UserDetails": [
+      {
+        "Department": "Contracts & Procurement",
+        "FirstName": "Albina",
+        "LastName": "Bezdetko",
+        "MobilePhone": "+61 459 330 065",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+61 459 330 065",
+        "Title": "Associate - Contracts & Procurement",
+        "Email": "albina.bezdetko@lidiargroup.com.au"
+      },
+      {
+        "Department": "Northern Territory",
+        "FirstName": "Arthur",
+        "LastName": "Dimitropoulos",
+        "MobilePhone": "+61 408 508 677",
+        "Office": "Level 1 - Suite 52, 48 - 50 Smith Street, Darwin, NT, 0800.",
+        "PhoneNumber": "+61 408 508 677",
+        "Title": "Senior Associate",
+        "Email": "arthur.dimitropoulos@lidiargroup.com.au"
+      },
+      {
+        "Department": "Project Management Services",
+        "FirstName": "Behshad",
+        "LastName": "Bordbar",
+        "MobilePhone": "+61 434 137 985",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+61 434 137 985",
+        "Title": "Associate - Project Controls",
+        "Email": "behshad.bordbar@lidiargroup.com.au"
+      },
+      {
+        "Department": "Project Management Services",
+        "FirstName": "Blair",
+        "LastName": "Barton",
+        "MobilePhone": "+61 400 612 231",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+61 400 612 231",
+        "Title": "Associate - Senior Project Manager",
+        "Email": "blair.barton@lidiargroup.com.au"
+      },
+      {
+        "Department": "Project Management Services",
+        "FirstName": "Candy",
+        "LastName": "Lopez",
+        "MobilePhone": "+61 432 251 184",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+61 432 251 184",
+        "Title": "Associate - Project Engineer",
+        "Email": "candy.lopez@lidiargroup.com.au"
+      },
+      {
+        "Department": "Contracts & Procurement",
+        "FirstName": "Clara",
+        "LastName": "Nyamandi",
+        "MobilePhone": "+61 434 635 462",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+61 434 635 462",
+        "Title": "Associate - Contracts & Procurement",
+        "Email": "clara.nyamandi@lidiargroup.com.au"
+      },
+      {
+        "Department": "Corporate",
+        "FirstName": "Clarisse",
+        "LastName": "Baldoza",
+        "MobilePhone": "+63 927 350 0861",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+63 927 350 0861",
+        "Title": "Associate - Accounts and Finance",
+        "Email": "clarisse.baldoza@lidiargroup.com.au"
+      },
+      {
+        "Department": "d",
+        "FirstName": "Conrad",
+        "LastName": "Hine",
+        "MobilePhone": "+61 421 502 782",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+61 421 502 782",
+        "Title": "Associate - Business Analyst",
+        "Email": "conrad.hine@lidiargroup.com.au"
+      },
+      {
+        "Department": "Health, Safety & Environment",
+        "FirstName": "Corey",
+        "LastName": "Kolar",
+        "MobilePhone": "+61 403 256 313",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+61 403 256 313",
+        "Title": "Associate - Health & Safety Consultant",
+        "Email": "corey.kolar@lidiargroup.com.au"
+      },
+      {
+        "FirstName": "Daniel",
+        "LastName": "Stone",
+        "MobilePhone": "+61 468 780 297",
+        "Office": "Level 3, 240 Queen Street",
+        "PhoneNumber": "+61 468 780 297",
+        "Title": "Associate - Health & Safety Advisor",
+        "Email": "daniel.stone@lidiargroup.com.au"
+      },
+      {
+        "FirstName": "Darren",
+        "LastName": "Cave",
+        "MobilePhone": "+61 418 619 137",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+61 418 619 137",
+        "Title": "Partner",
+        "Email": "darren.cave@lidiargroup.com.au"
+      },
+      {
+        "Department": "Lidiar Advisory",
+        "FirstName": "David",
+        "LastName": "Plowman",
+        "MobilePhone": "+61 452 000 450",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+61 452 000 450",
+        "Title": "Consulting Executive",
+        "Email": "david.plowman@lidiargroup.com.au"
+      },
+      {
+        "Department": "Corporate",
+        "FirstName": "Erwin",
+        "LastName": "Domantay",
+        "MobilePhone": "+63 9985869838",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+63 9985869838",
+        "Title": "Associate - SharePoint Developer",
+        "Email": "erwin.domantay@lidiargroup.com.au"
+      },
+      {
+        "Department": "Project Management Services",
+        "FirstName": "Frederico",
+        "LastName": "de Souza",
+        "MobilePhone": "+61 447 307 098 ",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+61 447 307 098 ",
+        "Title": "Associate - Project Engineer",
+        "Email": "frederico.desouza@lidiargroup.com.au"
+      },
+      {
+        "FirstName": "Geoff",
+        "LastName": "Saunders",
+        "MobilePhone": "+61 448 735 253",
+        "Office": "Brisbane",
+        "Title": "Associate - Project Engineer",
+        "Email": "geoff.saunders@lidiargroup.com.au"
+      },
+      {
+        "Department": "Northern Territory",
+        "FirstName": "Georgie",
+        "LastName": "Coles",
+        "MobilePhone": "+61 466 012 587",
+        "Office": "Level 1 - Suite 52, 48 - 50 Smith Street, Darwin, NT, 0800.",
+        "PhoneNumber": "+61 466 012 587",
+        "Title": "Associate - Environmental Consultant",
+        "Email": "georgie.coles@lidiargroup.com.au"
+      },
+      {
+        "FirstName": "Georgina",
+        "LastName": "Poole",
+        "MobilePhone": "+61 437 234 059 ",
+        "Office": "Brisbane",
+        "Email": "georgina.poole@lidiargroup.com.au"
+      },
+      {
+        "Department": "Project Management Services",
+        "FirstName": "Gerald",
+        "LastName": "Guillet",
+        "MobilePhone": "+61 499 453 535",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+61 499 453 535",
+        "Title": "Associate - Project Manager",
+        "Email": "gerald.guillet@lidiargroup.com.au"
+      },
+      {
+        "Department": "Project Management Services",
+        "FirstName": "Ishara",
+        "LastName": "Kadugalla",
+        "MobilePhone": "+61 403 481 211",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+61 403 481 211",
+        "Title": "Associate - Quantity Surveyor",
+        "Email": "ishara.kadugalla@lidiargroup.com.au"
+      },
+      {
+        "Department": "Corporate",
+        "FirstName": "Jessica",
+        "LastName": "Romero",
+        "MobilePhone": "+63 965 644 7570",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+63 965 644 7570",
+        "Title": "Associate - Timesheet Coordinator",
+        "Email": "jessica.romero@lidiargroup.com.au"
+      },
+      {
+        "Department": "Project Management Services",
+        "FirstName": "Jessica",
+        "LastName": "Talik",
+        "MobilePhone": "+61 0450 646 118",
+        "Office": "Level 3, 240 Queen Street",
+        "PhoneNumber": "+61 0450 646 118",
+        "Title": "Associate - Quantity Surveyor",
+        "Email": "jessica.talik@lidiargroup.com.au"
+      },
+      {
+        "Department": "Project Management Services",
+        "FirstName": "Joseph",
+        "LastName": "Boylan",
+        "MobilePhone": "+61 419 846 746",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+61 419 846 746",
+        "Title": "Associate - Project Manager",
+        "Email": "joseph.boylan@lidiargroup.com.au"
+      },
+      {
+        "Department": "Health & Safety",
+        "FirstName": "Julio",
+        "LastName": "Bará",
+        "MobilePhone": "+61 422 229 710",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+61 422 229 710",
+        "Title": "Senior Associate - Health & Safety",
+        "Email": "julio.bara@lidiargroup.com.au"
+      },
+      {
+        "Department": "Contracts & Procurement",
+        "FirstName": "Justin",
+        "LastName": "Bone",
+        "MobilePhone": "+61 473 015 451",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+61 473 015 451",
+        "Title": "Senior Associate - Contracts & Procurement",
+        "Email": "justin.bone@lidiargroup.com.au"
+      },
+      {
+        "Department": "Health & Safety",
+        "FirstName": "Kieren",
+        "LastName": "Thomas",
+        "MobilePhone": "+61 413 466 373",
+        "Office": "Level 3, 240 Queen Street",
+        "PhoneNumber": "+61 413 466 373",
+        "Title": "Associate - Health & Safety",
+        "Email": "kieren.thomas@lidiargroup.com.au"
+      },
+      {
+        "Department": "Management",
+        "FirstName": "Lachlan",
+        "LastName": "Winterbotham",
+        "MobilePhone": "+61 437 234 059",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+61 437 234 059",
+        "Title": "Partner",
+        "Email": "lachlan.winterbotham@lidiargroup.com.au"
+      },
+      {
+        "Department": "Corporate",
+        "FirstName": "Lara",
+        "LastName": "Lindsay",
+        "MobilePhone": "+61 402 789 654",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+61 402 789 654",
+        "Title": "Associate - Business Operations",
+        "Email": "lara.lindsay@lidiargroup.com.au"
+      },
+      {
+        "Department": "Contracts & Procurement",
+        "FirstName": "Laura",
+        "LastName": "Vacca",
+        "MobilePhone": "+61 435 031 664",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+61 435 031 664",
+        "Title": "Associate - Contracts & Procurement",
+        "Email": "laura.vacca@lidiargroup.com.au"
+      },
+      {
+        "Department": "Project Management Services",
+        "FirstName": "Lily",
+        "LastName": "Snezhina",
+        "MobilePhone": "+61 481 123 773",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+61 481 123 773",
+        "Title": "Associate - Business Analyst",
+        "Email": "lily.snezhina@lidiargroup.com.au"
+      },
+      {
+        "Department": "Northern Territory",
+        "FirstName": "Louis",
+        "LastName": "Alderdice",
+        "MobilePhone": "+61 416 050 521",
+        "Office": "Level 1 - Suite 52, 48 - 50 Smith Street, Darwin, NT, 0800.",
+        "PhoneNumber": "+61 416 050 521",
+        "Title": "Associate - Project Engineer",
+        "Email": "louis.alderdice@lidiargroup.com.au"
+      },
+      {
+        "Department": "d",
+        "FirstName": "Marianys",
+        "LastName": "Diaz",
+        "MobilePhone": "+61 410 682 547",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+61 410 682 547",
+        "Title": "Associate - Project Engineer",
+        "Email": "marianys.diaz@lidiargroup.com.au"
+      },
+      {
+        "Department": "Project Management Services",
+        "FirstName": "Michael",
+        "LastName": "Beaven",
+        "MobilePhone": "+61 413 880 198",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+61 413 880 198",
+        "Title": "Associate - Project Controls",
+        "Email": "michael.beaven@lidiargroup.com.au"
+      },
+      {
+        "Department": "Project Management Services",
+        "FirstName": "Natalie",
+        "LastName": "Robinson",
+        "MobilePhone": "+61 424 274 446",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+61 424 274 446",
+        "Title": "Associate - Environmental Consultant",
+        "Email": "natalie.robinson@lidiargroup.com.au"
+      },
+      {
+        "Department": "Project Management Services",
+        "FirstName": "Natig",
+        "LastName": "Nabiyev",
+        "MobilePhone": "+61 490 409 520",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+61 490 409 520",
+        "Title": "Project Engineer",
+        "Email": "natig.nabiyev@lidiargroup.com.au"
+      },
+      {
+        "Department": "Management",
+        "FirstName": "Niall",
+        "LastName": "Callan",
+        "MobilePhone": "+61 405 113 793",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+61 405 113 793",
+        "Title": "Partner",
+        "Email": "niall.callan@lidiargroup.com.au"
+      },
+      {
+        "Department": "Project Management Services",
+        "FirstName": "Olivia",
+        "LastName": "Hamilton",
+        "MobilePhone": "+61 450 612 069",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+61 450 612 069",
+        "Title": "Associate - Social Performance Analyst",
+        "Email": "olivia.hamilton@lidiargroup.com.au"
+      },
+      {
+        "Department": "Advisory",
+        "FirstName": "Pierre",
+        "LastName": "Vermeulen",
+        "MobilePhone": "+61 451 208 297 ",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+61 451 208 297 ",
+        "Title": "Associate - Commercial",
+        "Email": "pierre.vermeulen@lidiargroup.com.au"
+      },
+      {
+        "Department": "Project Management Services",
+        "FirstName": "Rebecca",
+        "LastName": "Patrick",
+        "MobilePhone": "+61 408 064 089",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+61 408 064 089",
+        "Title": "Associate - Creative & Design",
+        "Email": "rebecca.patrick@lidiargroup.com.au"
+      },
+      {
+        "Department": "Project Management Services",
+        "FirstName": "Rick",
+        "LastName": "Winsor",
+        "MobilePhone": "+61 400 678 844",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+61 400 678 844",
+        "Title": "Associate - Project Engineer",
+        "Email": "rick.winsor@lidiargroup.com.au"
+      },
+      {
+        "Department": "Project Management Services",
+        "FirstName": "Roshan",
+        "LastName": "Mathew",
+        "MobilePhone": "+61 424 134 075",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+61 424 134 075",
+        "Title": "Associate - Project Engineer",
+        "Email": "roshan.mathew@lidiargroup.com.au"
+      },
+      {
+        "Department": "Health & Safety",
+        "FirstName": "Savio",
+        "LastName": "Pereira",
+        "MobilePhone": "+61 450 670 331",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+61 450 670 331",
+        "Title": "Associate - Health & Safety",
+        "Email": "savio.pereira@lidiargroup.com.au"
+      },
+      {
+        "FirstName": "Scott",
+        "LastName": "John",
+        "MobilePhone": "+61 409 130 453",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "Title": "Consultant - Reciprocity - Organisational Performance Specialist",
+        "Email": "scott.john@lidiargroup.com.au"
+      },
+      {
+        "Department": "Contracts & Procurement",
+        "FirstName": "Sean",
+        "LastName": "Casey",
+        "MobilePhone": "+61 428 916 151",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+61 428 916 151",
+        "Title": "Associate - Contracts & Procurement",
+        "Email": "sean.casey@lidiargroup.com.au"
+      },
+      {
+        "Department": "Management",
+        "FirstName": "Shane",
+        "LastName": "Synnott",
+        "MobilePhone": "+61 404 812 454",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+61 404 812 454",
+        "Title": "Advisory Board Member",
+        "Email": "shane.synnott@lidiargroup.com.au"
+      },
+      {
+        "Department": "Environmental",
+        "FirstName": "Steve",
+        "LastName": "Onogbo",
+        "MobilePhone": "+61 410 826 339",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+61 410 826 339",
+        "Title": "Associate - Environment Consultant",
+        "Email": "steve.onogbo@lidiargroup.com.au"
+      },
+      {
+        "Department": "Project Management Services",
+        "FirstName": "Yoshi",
+        "LastName": "Lim",
+        "MobilePhone": "+61 492 455 580",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+61 492 455 580",
+        "Title": "Associate - Project Engineer",
+        "Email": "yoshi.lim@lidiargroup.com.au"
+      }
+    ]
+  };
+
+
   // https://lidiargroup.sharepoint.com/sites/IntegratedManagementSystem/SiteAssets/UserDetails.json
-  $.getJSON("https://raw.githubusercontent.com/ejdomantay/lidiar-group-signature/main/src/runtime/UserDetails.json", function(response) {
-      const curUser = response.UserDetails.filter(x => x.Email == Office.context.mailbox.userProfile.emailAddress)[0];
-      setSignatureTemplate({
-        Title: curUser.Title,
-        Phones: [{ Type: "Business", Number: curUser.PhoneNumber}],
-        OfficeLocation: curUser.Office
-       }, eventObj);
-    });
+  // $.getJSON("https://raw.githubusercontent.com/ejdomantay/lidiar-group-signature/main/src/runtime/UserDetails.json", function(response) {
+      
+  // });
+
+
+    
+  const curUser = userDetails.filter(x => x.Email == Office.context.mailbox.userProfile.emailAddress)[0];
+    setSignatureTemplate({
+      Title: curUser.Title,
+      Phones: [{ Type: "Business", Number: curUser.PhoneNumber}],
+      OfficeLocation: curUser.Office
+      }, eventObj);
+
   // Office.context.mailbox.getCallbackTokenAsync({
   //   isRest: true
   // }, function (result) {
