@@ -17,7 +17,7 @@ function checkSignature(eventObj) {
 }
 
 function getCurrentUser(eventObj){
-  var userDetails = {
+  var users = {
     "UserDetails": [
       {
         "Department": "Contracts & Procurement",
@@ -481,7 +481,7 @@ function getCurrentUser(eventObj){
 
 
     
-  const curUser = userDetails.filter(x => x.Email == Office.context.mailbox.userProfile.emailAddress)[0];
+  const curUser = users.UserDetails.filter(x => x.Email == Office.context.mailbox.userProfile.emailAddress)[0];
     setSignatureTemplate({
       Title: curUser.Title,
       Phones: [{ Type: "Business", Number: curUser.PhoneNumber}],
