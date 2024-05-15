@@ -469,6 +469,16 @@ function getCurrentUser(eventObj){
         "PhoneNumber": "+61 492 455 580",
         "Title": "Associate - Project Engineer",
         "Email": "yoshi.lim@lidiargroup.com.au"
+      },
+      {
+        "Department": "Health & Safety",
+        "FirstName": "Nathan",
+        "LastName": "Wallis",
+        "MobilePhone": "+61 403 597 211",
+        "Office": "Level 5, 144 Edward Street, Brisbane, Queensland, 4000.",
+        "PhoneNumber": "+61 403 597 211",
+        "Title": "Associate - Health & Safety Consultant",
+        "Email": "nathan.wallis@lidiargroup.com.au"
       }
     ]
   };
